@@ -976,12 +976,11 @@ setTimeout(function() {
 } , 1000);
 
 var mainSelectvalue = elChangeSelectBoxSelect.value;
-var mainSelectText = ``;
 
 setInterval(function() {
   mainSelectvalue = elChangeSelectBoxSelect.value;
   elChangeSelectBoxTimeTitle.textContent = `${mainSelectvalue}ga Qancha vaqtga sayohat qilmoqchisiz`;
-  elChangeMainCheckBoxText.textContent = `${mainSelectvalue} da nimalarga pul ishlatmoqchisiz`;
+  elChangeMainCheckBoxText.textContent = `${mainSelectvalue}da nimalarga pul ishlatmoqchisiz`;
 } , 1);
 
 
@@ -1114,7 +1113,7 @@ elChangeMainBoxLine.style.width = '100%';
 elChangeMainBoxLine.style.height = '1px';
 elChangeMainBoxLine.style.backgroundColor = '#d6d6d6';
 elChangeMainBoxLine.style.opacity = '0';
-elChangeMainBoxLine.style.marginTop = '35px';
+elChangeMainBoxLine.style.marginTop = '40px';
 
 // CHANGE HOTEL BOX START
 
