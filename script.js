@@ -879,6 +879,7 @@ elChangeSelectBoxSelect.onmouseout = function() {
 var elChangeSelectBoxOption = document.createElement('option');
 elChangeSelectBoxSelect.appendChild(elChangeSelectBoxOption);
 elChangeSelectBoxOption.textContent = 'Mamlakatni tanlang';
+// elChangeSelectBoxOption.selected = true;
 elChangeSelectBoxOption.disabled = true;
 
 var elChangeSelectBoxSpanOption = document.createElement('option');
@@ -975,10 +976,13 @@ setTimeout(function() {
 } , 1000);
 
 var mainSelectvalue = elChangeSelectBoxSelect.value;
+var mainSelectText = ``;
 
 setInterval(function() {
   mainSelectvalue = elChangeSelectBoxSelect.value;
+  elChangeSelectBoxTimeTitle.textContent = `${mainSelectvalue}ga Qancha vaqtga sayohat qilmoqchisiz`;
 } , 1);
+
 
 var elChangeSelectTimeBox = document.createElement('div');
 elChangeBox.appendChild(elChangeSelectTimeBox);
@@ -988,7 +992,6 @@ elChangeSelectTimeBox.style.marginTop = '-47px';
 
 var elChangeSelectBoxTimeTitle = document.createElement('p');
 elChangeSelectTimeBox.appendChild(elChangeSelectBoxTimeTitle);
-// elChangeSelectBoxTimeTitle.textContent = `${mainSelectvalue} ga Qancha vaqtga sayohat qilmoqchisiz`;
 elChangeSelectBoxTimeTitle.style.textAlign = 'start';
 elChangeSelectBoxTimeTitle.style.fontSize = '.8rem';
 elChangeSelectBoxTimeTitle.style.margin = '0';
