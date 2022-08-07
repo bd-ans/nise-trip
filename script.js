@@ -1,4 +1,17 @@
 var regStatus = true;
+var hotelPriceUSD = 120.72;
+var aviaTicketPriceEUR = 513.84;
+var suvinersPriceUSD = 213.64;
+
+var hotelPriceUZS = hotelPriceUSD * 10976.29;
+var aviaTicketPriceUZS = aviaTicketPriceEUR * 11181.93;
+var suvinersPriceUZS = suvinersPriceUSD * 10976.29;
+
+hotelPriceUZS = hotelPriceUZS.toFixed(0);
+aviaTicketPriceUZS = aviaTicketPriceUZS.toFixed(0);
+suvinersPriceUZS = suvinersPriceUZS.toFixed(0);
+
+console.log(suvinersPriceUZS);
 
 // START CREATING END STYLING
 var body = document.getElementsByTagName('body')[0];
