@@ -1175,7 +1175,7 @@ elChangeMainSwitchLabel.style.marginTop = '9px';
 
 var elChangeMainSwitchRadioBox = document.createElement('div');
 elChangeMainCheckBox.appendChild(elChangeMainSwitchRadioBox);
-elChangeMainSwitchRadioBox.setAttribute('class', 'form-check form-check-inline ms-5');
+elChangeMainSwitchRadioBox.setAttribute('class', 'form-check form-check-inline');
 
 var elChangeMainSwitchRadioInput = document.createElement('input');
 elChangeMainSwitchRadioBox.appendChild(elChangeMainSwitchRadioInput);
