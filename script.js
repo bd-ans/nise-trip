@@ -11,7 +11,7 @@ hotelPriceUZS = hotelPriceUZS.toFixed(0);
 aviaTicketPriceUZS = aviaTicketPriceUZS.toFixed(0);
 suvinersPriceUZS = suvinersPriceUZS.toFixed(0);
 
-console.log(suvinersPriceUZS);
+var travelCost = 0;
 
 // START CREATING END STYLING
 var body = document.getElementsByTagName('body')[0];
@@ -44,7 +44,7 @@ elWelcomeBox.style.height = '400px';
 elWelcomeBox.style.display = 'flex';
 elWelcomeBox.style.justifyContent = 'center';
 elWelcomeBox.style.alignItems = 'center';
-elWelcomeBox.style.display = 'none';
+// elWelcomeBox.style.display = 'none';
 
 var elWelcomeBoxInner = document.createElement('div');
 elWelcomeBox.appendChild(elWelcomeBoxInner);
@@ -79,7 +79,7 @@ elWelcomeBoxButtonBox.style.alignItems = 'center';
 elWelcomeBoxButtonBox.style.marginTop = '10px';
 elWelcomeBoxButtonBox.style.position = 'relative';
 
-                                                           //Sign Up BTn
+//Sign Up BTn
 
 var elSignInButton = document.createElement('button');
 elWelcomeBoxButtonBox.appendChild(elSignInButton);
@@ -158,9 +158,10 @@ elSignUpButton.onclick = function() {
   userLastNameValue = 'Akbarov';
   userName.textContent = userNameValue + ' ' + userLastNameValue;
   userNickName.textContent = 'asn_me';
-  var balanceMain = Math.floor(Math.random() * (10000000 - 1) + 1);
-  userMoney.textContent = balanceMain;
-  userMoney = balanceMain;
+  // var balanceMain = Math.floor(Math.random() * (50000000 - 1) + 1);
+  var balanceMain = 5000000;
+  userMoney.textContent = balanceMain + ' UZS';
+  userMoney.value = balanceMain;
 }
 
 elSignInButton.onclick = function() {
@@ -195,7 +196,9 @@ elSignInButton.onclick = function() {
   userLastNameValue = elWelcomeFormBoxRightInput.value;
   userName.textContent = userNameValue + ' ' + userLastNameValue;
   userNickName.textContent = elWelcomeFormBoxLeftSecondInput.value.toLowerCase();
-}                                                             //Sign In BTn
+} 
+
+//Sign In BTn
 
 var elWelcomeForm = document.createElement('form');
 elWelcomeBoxInner.appendChild(elWelcomeForm);
@@ -436,7 +439,7 @@ elWelcomeFormBoxLeftTitle.style.color = '#fff3e0';
 
 var elWelcomeFormBoxLeftLastInput = document.createElement('input');
 elWelcomeFormBoxLastLeft.appendChild(elWelcomeFormBoxLeftLastInput);
-elWelcomeFormBoxLeftLastInput.type = 'number';
+// elWelcomeFormBoxLeftLastInput.type = 'number';
 elWelcomeFormBoxLeftLastInput.setAttribute('maxlength', 13 );
 elWelcomeFormBoxLeftLastInput.style.border = 'none';
 elWelcomeFormBoxLeftLastInput.style.borderRadius = '5px';
@@ -549,8 +552,8 @@ elSignInFormBoxButton.onclick = function() {
   userLastNameValue = elWelcomeFormBoxRightInput.value;
   userName.textContent = userNameValue + ' ' + userLastNameValue;
   userNickName.textContent = elWelcomeFormBoxLeftSecondInput.value.toLowerCase();
-  userMoney.textContent = elWelcomeFormBoxLeftLastInput.value;
-  userMoney = elWelcomeFormBoxLeftLastInput.value;
+  userMoney.textContent = elWelcomeFormBoxLeftLastInput.value + ' UZS';
+  userMoney.value = elWelcomeFormBoxLeftLastInput.value;
 }                                                              //Sign In BTn
 
 //SIGN IN SECTION
@@ -728,7 +731,7 @@ var elMain = document.createElement('div');
 elContainer.appendChild(elMain);
 elMain.style.height = '100vh';
 elMain.style.width = '100%';
-// elMain.style.display = 'none';
+elMain.style.display = 'none';
 
 var elHeader = document.createElement('div');
 elMain.appendChild(elHeader);
@@ -892,7 +895,6 @@ elChangeSelectBoxSelect.onmouseout = function() {
 var elChangeSelectBoxOption = document.createElement('option');
 elChangeSelectBoxSelect.appendChild(elChangeSelectBoxOption);
 elChangeSelectBoxOption.textContent = 'Mamlakatni tanlang';
-// elChangeSelectBoxOption.selected = true;
 elChangeSelectBoxOption.disabled = true;
 
 var elChangeSelectBoxSpanOption = document.createElement('option');
@@ -988,6 +990,75 @@ setTimeout(function() {
     }
 } , 1000);
 
+var countryName = '';
+
+setInterval(function() {
+  if (elChangeSelectBoxSelect.value === 'Ispaniya') {
+    travelCost = 2030000;
+    countryName = 'Ispaniya';
+  } else if (elChangeSelectBoxSelect.value === 'Italiya') {
+    travelCost = 4200000;
+    countryName = 'Italiya';
+  } else if (elChangeSelectBoxSelect.value === 'Gretsiya') {
+    travelCost = 3040000;
+    countryName = 'Gretsiya';
+  } else if (elChangeSelectBoxSelect.value === 'Yangi Zellandiya') {
+    travelCost = 6300000;
+    countryName = 'Yangi Zellandiya';
+  } else if (elChangeSelectBoxSelect.value === 'Avstraliya') {
+    travelCost = 2300000;
+    countryName = 'Avstraliya';
+  } else if (elChangeSelectBoxSelect.value === 'Partugaliya') {
+    travelCost = 6450000;
+    countryName = 'Partugaliya';
+  } else if (elChangeSelectBoxSelect.value === 'Braziliya') {
+    travelCost = 1350000;
+    countryName = 'Braziliya';
+  } else if (elChangeSelectBoxSelect.value === 'Irlandiya') {
+    travelCost = 6480000;
+    countryName = 'Irlandiya';
+  } else if (elChangeSelectBoxSelect.value === 'Tailand') {
+    travelCost = 8750000;
+    countryName = 'Tailand';
+  } else if (elChangeSelectBoxSelect.value === 'Meksika') {
+    travelCost = 7480000;
+    countryName = 'Meksika';
+  } else if (elChangeSelectBoxSelect.value === 'Shvetsiya') {
+    travelCost = 7800000;
+    countryName = 'Shvetsiya';
+  } else if (elChangeSelectBoxSelect.value === 'Niderlandiya') {
+    travelCost = 2350000;
+    countryName = 'Niderlandiya';
+  } else if (elChangeSelectBoxSelect.value === 'Kanada') {
+    travelCost = 5360400;
+    countryName = 'Kanada';
+  } else if (elChangeSelectBoxSelect.value === 'Avstriya') {
+    travelCost = 6780000;
+    countryName = 'Avstriya';
+  } else if (elChangeSelectBoxSelect.value === 'Narvegiya') {
+    travelCost = 2340000;
+    countryName = 'Narvegiya';
+  } else if (elChangeSelectBoxSelect.value === 'Finlandiya') {
+    travelCost = 5780000;
+    countryName = 'Finlandiya';
+  } else if (elChangeSelectBoxSelect.value === 'Shvetsiya') {
+    travelCost = 4560000;
+    countryName = 'Shvetsiya';
+  } else if (elChangeSelectBoxSelect.value === 'Fransiya') {
+    travelCost = 7303000;
+    countryName = 'Fransiya';
+  } else if (elChangeSelectBoxSelect.value === 'Argentina') {
+    travelCost = 4204000;
+    countryName = 'Argentina';
+  } else if (elChangeSelectBoxSelect.value === 'Singapur') {
+    travelCost = 1204000;
+    countryName = 'Singapur';
+  } else {
+    travelCost = 0;
+  }
+  // console.log(travelCost);
+} , 100);
+
 var mainSelectvalue = elChangeSelectBoxSelect.value;
 
 setInterval(function() {
@@ -1017,6 +1088,7 @@ elChangeSelectBoxTimeTitle.style.marginBottom = '3px';
 
 var elChangeSelectBoxTimeSelectForm = document.createElement('form');
 elChangeSelectTimeBox.appendChild(elChangeSelectBoxTimeSelectForm);
+elChangeSelectBoxTimeSelectForm.id = 'changeSelectBoxTimeSelectForm';
 
 var elChangeSelectBoxTimeRadioBox = document.createElement('div');
 elChangeSelectBoxTimeSelectForm.appendChild(elChangeSelectBoxTimeRadioBox);
@@ -1154,6 +1226,30 @@ elChangeSelectBoxTimeRadioBoxSixMonthRadioLabel.onmouseout = function() {
   elChangeSelectBoxTimeRadioBoxSixMonthRadioLabel.style.textShadow = '0 0 6px #d6d6d6';
 }
 
+var tripTime = '';
+
+setInterval(function() {
+  if (elChangeSelectBoxTimeRadioBoxWeekRadio.checked) {
+    travelCost = travelCost + 1200000;
+    tripTime = '1 Hafta';
+  } else if (elChangeSelectBoxTimeRadioBoxTwoWeekRadio.checked) {
+    travelCost = travelCost + 2000000;
+    tripTime = '2 Hafta';
+  } else if (elChangeSelectBoxTimeRadioBoxMonthRadio.checked) {
+    travelCost = travelCost + 3600000;
+    tripTime = '1 Oyga';
+  } else if (elChangeSelectBoxTimeRadioBoxThreeMonthRadio.checked) {
+    travelCost = travelCost + 10000000;
+    tripTime = '3 Oyga';
+  } else if (elChangeSelectBoxTimeRadioBoxSixMonthRadio.checked) {
+    travelCost = travelCost + 18000000;
+    tripTime = '6 Oyga';
+  } else {
+    travelCost = travelCost;
+  }
+}
+, 100);
+
 var elChangeMainBox = document.createElement('div');
 elChangeBox.appendChild(elChangeMainBox);
 elChangeMainBox.style.display = 'flex';
@@ -1280,6 +1376,66 @@ elChangeMainSwitchSuvinertLabel.style.textShadow = '0 0 6px #d6d6d6';
 elChangeMainSwitchSuvinertLabel.style.userSelect = 'none';
 elChangeMainSwitchSuvinertLabel.style.marginTop = '8px';
 elChangeMainSwitchSuvinertLabel.style.cursor = 'pointer';
+
+// CHANGE REMEMBER BOX END
+// MAIN INFO BOX START
+
+var mainInfoBox = document.createElement('div');
+elChangeBox.appendChild(mainInfoBox);
+
+var mainInfoBoxTitle = document.createElement('p');
+mainInfoBox.appendChild(mainInfoBoxTitle);
+mainInfoBoxTitle.style.fontSize = '1.3rem';
+mainInfoBoxTitle.style.fontWeight = 'bold';
+mainInfoBoxTitle.style.textAlign = 'center';
+mainInfoBoxTitle.style.transform = 'translateY(27px)';
+mainInfoBoxTitle.style.marginTop = '40px';
+mainInfoBoxTitle.style.marginBottom = '0';
+mainInfoBoxTitle.style.color = '#d6d6d6';
+mainInfoBoxTitle.style.userSelect = 'none';
+mainInfoBoxTitle.style.opacity = '0';
+
+var spendMoney = '';
+
+setInterval(function() {
+    if (elChangeMainSwitchInput.checked) {
+      travelCost = travelCost + 2120000;
+      spendMoney = 'Mehmonhona';
+      mainInfoBoxTitle.style.transform = 'translateY(27px)';
+      mainInfoBoxTitle.style.opacity = '1';
+      mainInfoBoxTitle.style.transition = 'all 0.3s ease-in-out';
+    }
+    if (elChangeMainTicketSwitchInput.checked) {
+      travelCost = travelCost + 3120000;
+      spendMoney = 'Avia chipta';
+      mainInfoBoxTitle.style.transform = 'translateY(27px)';
+      mainInfoBoxTitle.style.opacity = '1';
+      mainInfoBoxTitle.style.transition = 'all 0.3s ease-in-out';
+    }
+    if (elChangeMainSuvinerSwitchInput.checked) {
+      travelCost = travelCost + 1020000;
+      spendMoney = 'Suvinerlar';
+      mainInfoBoxTitle.style.transform = 'translateY(27px)';
+      mainInfoBoxTitle.style.opacity = '1';
+      mainInfoBoxTitle.style.transition = 'all 0.3s ease-in-out';
+    }
+    setInterval(function() {
+      if (elChangeMainSwitchInput.checked == false && elChangeMainTicketSwitchInput.checked == false && elChangeMainSuvinerSwitchInput.checked == false) {
+        mainInfoBoxTitle.style.transform = 'translateY(27px)';
+        mainInfoBoxTitle.style.opacity = '0';
+        mainInfoBoxTitle.style.transition = 'all 0.3s ease-in-out';
+      }
+    }
+    , 1);
+  
+  if (userMoney.value >= travelCost) {
+    mainInfoBoxTitle.textContent = `${countryName}ga ${tripTime} sayohatga chiqaolasiz va qo'shimcha ${spendMoney}gaham pulingiz yetadi`;
+  } if (userMoney.value < travelCost) {
+    mainInfoBoxTitle.textContent = `${countryName}ga ${tripTime} sayohatga chiqaolmaysiz. Sizga ${travelCost - userMoney.value} yetmayapdi`;
+    mainInfoBoxTitle.style.color = '#ff0';
+  }
+}, 100);
+
 
 // CHANGE REMEMBER BOX END
 // END CREATING END STYLING
