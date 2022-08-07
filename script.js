@@ -1241,14 +1241,32 @@ elChangeMainSwitchTicketLabel.style.cursor = 'pointer';
 
 // CHANGE TICKET BOX END
 
+// CHANGE REMEMBER BOX START
 
+var elChangeMainSuvinerCheckBox = document.createElement('div');
+elChangeMainCheckBox.appendChild(elChangeMainSuvinerCheckBox);
+elChangeMainSuvinerCheckBox.setAttribute('class', 'form-check form-switch');
+elChangeMainSuvinerCheckBox.style.marginTop = '1px';
 
+var elChangeMainSuvinerSwitchInput = document.createElement('input');
+elChangeMainSuvinerCheckBox.appendChild(elChangeMainSuvinerSwitchInput);
+elChangeMainSuvinerSwitchInput.type = 'checkbox';
+elChangeMainSuvinerSwitchInput.setAttribute('class', 'form-check-input');
+elChangeMainSuvinerSwitchInput.id = 'suvinerRememberSwitch';
+elChangeMainSuvinerSwitchInput.setAttribute('role', 'switch');
+elChangeMainSuvinerSwitchInput.style.marginTop = '7px';
+elChangeMainSuvinerSwitchInput.style.cursor = 'pointer';
 
+var elChangeMainSwitchSuvinertLabel = document.createElement('label');
+elChangeMainSuvinerCheckBox.appendChild(elChangeMainSwitchSuvinertLabel);
+elChangeMainSwitchSuvinertLabel.setAttribute('class', 'form-check-label text-light');
+elChangeMainSwitchSuvinertLabel.setAttribute('for', 'suvinerRememberSwitch');
+elChangeMainSwitchSuvinertLabel.textContent = 'Suvinerlarga';
+elChangeMainSwitchSuvinertLabel.style.fontSize = '1rem';
+elChangeMainSwitchSuvinertLabel.style.textShadow = '0 0 6px #d6d6d6';
+elChangeMainSwitchSuvinertLabel.style.userSelect = 'none';
+elChangeMainSwitchSuvinertLabel.style.marginTop = '8px';
+elChangeMainSwitchSuvinertLabel.style.cursor = 'pointer';
 
-
-
-
-
-
-
+// CHANGE REMEMBER BOX END
 // END CREATING END STYLING
