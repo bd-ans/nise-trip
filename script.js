@@ -1160,6 +1160,7 @@ var elChangeMainCheckBox = document.createElement('div');
 elChangeBox.appendChild(elChangeMainCheckBox);
 elChangeMainCheckBox.style.display = 'flex';
 elChangeMainCheckBox.style.alignItems = 'center';
+elChangeMainCheckBox.style.justifyContent = 'space-between';
 elChangeMainCheckBox.style.marginTop = '-17px';
 elChangeMainCheckBox.style.opacity = '0';
 elChangeMainCheckBox.style.position = 'relative';
@@ -1197,41 +1198,57 @@ elChangeMainSwitchInput.setAttribute('class', 'form-check-input');
 elChangeMainSwitchInput.id = 'flexSwitchCheckDefault';
 elChangeMainSwitchInput.setAttribute('role', 'switch');
 elChangeMainSwitchInput.style.marginTop = '7px';
+elChangeMainSwitchInput.style.cursor = 'pointer';
 
 var elChangeMainSwitchLabel = document.createElement('label');
 elChangeMainHotelCheckBox.appendChild(elChangeMainSwitchLabel);
 elChangeMainSwitchLabel.setAttribute('class', 'form-check-label text-light');
 elChangeMainSwitchLabel.setAttribute('for', 'flexSwitchCheckDefault');
-elChangeMainSwitchLabel.textContent = 'Mehmonhona';
+elChangeMainSwitchLabel.textContent = 'Mehmonhonaga';
 elChangeMainSwitchLabel.style.fontSize = '1rem';
 elChangeMainSwitchLabel.style.textShadow = '0 0 6px #d6d6d6';
 elChangeMainSwitchLabel.style.userSelect = 'none';
-elChangeMainSwitchLabel.style.marginTop = '9px';
+elChangeMainSwitchLabel.style.marginTop = '8px';
+elChangeMainSwitchLabel.style.cursor = 'pointer';
 
 // CHANGE HOTEL BOX EDN
-// CHANGE HOTEL SWITCH BOX START
+// CHANGE TICKET BOX START
 
-var elChangeMainSwitchRadioBox = document.createElement('div');
-elChangeMainCheckBox.appendChild(elChangeMainSwitchRadioBox);
-elChangeMainSwitchRadioBox.setAttribute('class', 'form-check form-check-inline');
+var elChangeMainTicketCheckBox = document.createElement('div');
+elChangeMainCheckBox.appendChild(elChangeMainTicketCheckBox);
+elChangeMainTicketCheckBox.setAttribute('class', 'form-check form-switch');
+elChangeMainTicketCheckBox.style.marginTop = '1px';
 
-var elChangeMainSwitchRadioInput = document.createElement('input');
-elChangeMainSwitchRadioBox.appendChild(elChangeMainSwitchRadioInput);
-elChangeMainSwitchRadioInput.type = 'checkbox';
-elChangeMainSwitchRadioInput.setAttribute('class', 'form-check-input');
-elChangeMainSwitchRadioInput.id = 'inlineCheckbox1';
-elChangeMainSwitchRadioInput.setAttribute('value', 'option1');
+var elChangeMainTicketSwitchInput = document.createElement('input');
+elChangeMainTicketCheckBox.appendChild(elChangeMainTicketSwitchInput);
+elChangeMainTicketSwitchInput.type = 'checkbox';
+elChangeMainTicketSwitchInput.setAttribute('class', 'form-check-input');
+elChangeMainTicketSwitchInput.id = 'aviaTicketSwitch';
+elChangeMainTicketSwitchInput.setAttribute('role', 'switch');
+elChangeMainTicketSwitchInput.style.marginTop = '7px';
+elChangeMainTicketSwitchInput.style.cursor = 'pointer';
 
-var elChangeMainSwitchRadioLabel = document.createElement('label');
-elChangeMainSwitchRadioBox.appendChild(elChangeMainSwitchRadioLabel);
-elChangeMainSwitchRadioLabel.setAttribute('class', 'form-check-label text-light');
-elChangeMainSwitchRadioLabel.setAttribute('for', 'inlineCheckbox1');
-elChangeMainSwitchRadioLabel.textContent = 'Kredit';
-elChangeMainSwitchRadioLabel.style.fontSize = '1rem';
-elChangeMainSwitchRadioLabel.style.textShadow = '0 0 6px #d6d6d6';
-elChangeMainSwitchRadioLabel.style.userSelect = 'none';
-elChangeMainSwitchRadioLabel.style.marginTop = '5px';
+var elChangeMainSwitchTicketLabel = document.createElement('label');
+elChangeMainTicketCheckBox.appendChild(elChangeMainSwitchTicketLabel);
+elChangeMainSwitchTicketLabel.setAttribute('class', 'form-check-label text-light');
+elChangeMainSwitchTicketLabel.setAttribute('for', 'aviaTicketSwitch');
+elChangeMainSwitchTicketLabel.textContent = 'Avia chiptaga';
+elChangeMainSwitchTicketLabel.style.fontSize = '1rem';
+elChangeMainSwitchTicketLabel.style.textShadow = '0 0 6px #d6d6d6';
+elChangeMainSwitchTicketLabel.style.userSelect = 'none';
+elChangeMainSwitchTicketLabel.style.marginTop = '8px';
+elChangeMainSwitchTicketLabel.style.cursor = 'pointer';
 
-// CHANGE HOTEL SWITCH BOX START
+// CHANGE TICKET BOX END
+
+
+
+
+
+
+
+
+
+
 
 // END CREATING END STYLING
