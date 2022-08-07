@@ -1018,6 +1018,7 @@ elChangeSelectBoxTimeRadioBoxWeekRadio.name = 'time';
 elChangeSelectBoxTimeRadioBoxWeekRadio.id = 'week';
 elChangeSelectBoxTimeRadioBoxWeekRadio.value = '1Week';
 elChangeSelectBoxTimeRadioBoxWeekRadio.style.margin = '0';
+elChangeSelectBoxTimeRadioBoxWeekRadio.style.cursor = 'pointer';
 
 var elChangeSelectBoxTimeRadioBoxWeekRadioLabel = document.createElement('label');
 elChangeSelectBoxTimeRadioBox.appendChild(elChangeSelectBoxTimeRadioBoxWeekRadioLabel);
@@ -1028,6 +1029,13 @@ elChangeSelectBoxTimeRadioBoxWeekRadioLabel.style.fontSize = '.9rem';
 elChangeSelectBoxTimeRadioBoxWeekRadioLabel.style.color = '#f8f8f8';
 elChangeSelectBoxTimeRadioBoxWeekRadioLabel.style.userSelect = 'none';
 elChangeSelectBoxTimeRadioBoxWeekRadioLabel.style.textShadow = '0 0 6px #d6d6d6';
+elChangeSelectBoxTimeRadioBoxWeekRadioLabel.style.cursor = 'pointer';
+elChangeSelectBoxTimeRadioBoxWeekRadioLabel.onmousemove = function() {
+  elChangeSelectBoxTimeRadioBoxWeekRadioLabel.style.textShadow = '0 0 20px #d6d6d6';
+}
+elChangeSelectBoxTimeRadioBoxWeekRadioLabel.onmouseout = function() {
+  elChangeSelectBoxTimeRadioBoxWeekRadioLabel.style.textShadow = '0 0 6px #d6d6d6';
+}
 
 var elChangeSelectBoxTimeRadioBoxTwoWeekRadio = document.createElement('input');
 elChangeSelectBoxTimeRadioBox.appendChild(elChangeSelectBoxTimeRadioBoxTwoWeekRadio);
@@ -1036,6 +1044,7 @@ elChangeSelectBoxTimeRadioBoxTwoWeekRadio.name = 'time';
 elChangeSelectBoxTimeRadioBoxTwoWeekRadio.id = 'twoWeek';
 elChangeSelectBoxTimeRadioBoxTwoWeekRadio.value = '2Week';
 elChangeSelectBoxTimeRadioBoxTwoWeekRadio.style.margin = '0';
+elChangeSelectBoxTimeRadioBoxTwoWeekRadio.style.cursor = 'pointer';
 
 var elChangeSelectBoxTimeRadioBoxTwoWeekRadioLabel = document.createElement('label');
 elChangeSelectBoxTimeRadioBox.appendChild(elChangeSelectBoxTimeRadioBoxTwoWeekRadioLabel);
@@ -1046,6 +1055,13 @@ elChangeSelectBoxTimeRadioBoxTwoWeekRadioLabel.style.fontSize = '.9rem';
 elChangeSelectBoxTimeRadioBoxTwoWeekRadioLabel.style.color = '#f8f8f8';
 elChangeSelectBoxTimeRadioBoxTwoWeekRadioLabel.style.userSelect = 'none';
 elChangeSelectBoxTimeRadioBoxTwoWeekRadioLabel.style.textShadow = '0 0 6px #d6d6d6';
+elChangeSelectBoxTimeRadioBoxTwoWeekRadioLabel.style.cursor = 'pointer';
+elChangeSelectBoxTimeRadioBoxTwoWeekRadioLabel.onmousemove = function() {
+  elChangeSelectBoxTimeRadioBoxTwoWeekRadioLabel.style.textShadow = '0 0 20px #d6d6d6';
+}
+elChangeSelectBoxTimeRadioBoxTwoWeekRadioLabel.onmouseout = function() {
+  elChangeSelectBoxTimeRadioBoxTwoWeekRadioLabel.style.textShadow = '0 0 6px #d6d6d6';
+}
 
 var elChangeSelectBoxTimeRadioBoxMonthRadio = document.createElement('input');
 elChangeSelectBoxTimeRadioBox.appendChild(elChangeSelectBoxTimeRadioBoxMonthRadio);
@@ -1054,6 +1070,7 @@ elChangeSelectBoxTimeRadioBoxMonthRadio.name = 'time';
 elChangeSelectBoxTimeRadioBoxMonthRadio.id = 'month';
 elChangeSelectBoxTimeRadioBoxMonthRadio.value = '1Month';
 elChangeSelectBoxTimeRadioBoxMonthRadio.style.margin = '0';
+elChangeSelectBoxTimeRadioBoxMonthRadio.style.cursor = 'pointer';
 
 var elChangeSelectBoxTimeRadioBoxTwoWeekRadioLabel = document.createElement('label');
 elChangeSelectBoxTimeRadioBox.appendChild(elChangeSelectBoxTimeRadioBoxTwoWeekRadioLabel);
@@ -1064,6 +1081,13 @@ elChangeSelectBoxTimeRadioBoxTwoWeekRadioLabel.style.fontSize = '.9rem';
 elChangeSelectBoxTimeRadioBoxTwoWeekRadioLabel.style.color = '#f8f8f8';
 elChangeSelectBoxTimeRadioBoxTwoWeekRadioLabel.style.userSelect = 'none';
 elChangeSelectBoxTimeRadioBoxTwoWeekRadioLabel.style.textShadow = '0 0 6px #d6d6d6';
+elChangeSelectBoxTimeRadioBoxTwoWeekRadioLabel.style.cursor = 'pointer';
+elChangeSelectBoxTimeRadioBoxTwoWeekRadioLabel.onmousemove = function() {
+  elChangeSelectBoxTimeRadioBoxTwoWeekRadioLabel.style.textShadow = '0 0 20px #d6d6d6';
+}
+elChangeSelectBoxTimeRadioBoxTwoWeekRadioLabel.onmouseout = function() {
+  elChangeSelectBoxTimeRadioBoxTwoWeekRadioLabel.style.textShadow = '0 0 6px #d6d6d6';
+}
 
 var elChangeSelectBoxTimeRadioBoxThreeMonthRadio = document.createElement('input');
 elChangeSelectBoxTimeRadioBox.appendChild(elChangeSelectBoxTimeRadioBoxThreeMonthRadio);
@@ -1072,6 +1096,7 @@ elChangeSelectBoxTimeRadioBoxThreeMonthRadio.name = 'time';
 elChangeSelectBoxTimeRadioBoxThreeMonthRadio.id = 'threeMonth';
 elChangeSelectBoxTimeRadioBoxThreeMonthRadio.value = '3Month';
 elChangeSelectBoxTimeRadioBoxThreeMonthRadio.style.margin = '0';
+elChangeSelectBoxTimeRadioBoxThreeMonthRadio.style.cursor = 'pointer';
 
 var elChangeSelectBoxTimeRadioBoxThreeMonthRadioLabel = document.createElement('label');
 elChangeSelectBoxTimeRadioBox.appendChild(elChangeSelectBoxTimeRadioBoxThreeMonthRadioLabel);
@@ -1082,6 +1107,13 @@ elChangeSelectBoxTimeRadioBoxThreeMonthRadioLabel.style.fontSize = '.9rem';
 elChangeSelectBoxTimeRadioBoxThreeMonthRadioLabel.style.color = '#f8f8f8';
 elChangeSelectBoxTimeRadioBoxThreeMonthRadioLabel.style.userSelect = 'none';
 elChangeSelectBoxTimeRadioBoxThreeMonthRadioLabel.style.textShadow = '0 0 6px #d6d6d6';
+elChangeSelectBoxTimeRadioBoxThreeMonthRadioLabel.style.cursor = 'pointer';
+elChangeSelectBoxTimeRadioBoxThreeMonthRadioLabel.onmousemove = function() {
+  elChangeSelectBoxTimeRadioBoxThreeMonthRadioLabel.style.textShadow = '0 0 20px #d6d6d6';
+}
+elChangeSelectBoxTimeRadioBoxThreeMonthRadioLabel.onmouseout = function() {
+  elChangeSelectBoxTimeRadioBoxThreeMonthRadioLabel.style.textShadow = '0 0 6px #d6d6d6';
+}
 
 var elChangeSelectBoxTimeRadioBoxSixMonthRadio = document.createElement('input');
 elChangeSelectBoxTimeRadioBox.appendChild(elChangeSelectBoxTimeRadioBoxSixMonthRadio);
@@ -1090,6 +1122,7 @@ elChangeSelectBoxTimeRadioBoxSixMonthRadio.name = 'time';
 elChangeSelectBoxTimeRadioBoxSixMonthRadio.id = 'sixMonth';
 elChangeSelectBoxTimeRadioBoxSixMonthRadio.value = '6Month';
 elChangeSelectBoxTimeRadioBoxSixMonthRadio.style.margin = '0';
+elChangeSelectBoxTimeRadioBoxSixMonthRadio.style.cursor = 'pointer';
 
 var elChangeSelectBoxTimeRadioBoxSixMonthRadioLabel = document.createElement('label');
 elChangeSelectBoxTimeRadioBox.appendChild(elChangeSelectBoxTimeRadioBoxSixMonthRadioLabel);
@@ -1100,12 +1133,18 @@ elChangeSelectBoxTimeRadioBoxSixMonthRadioLabel.style.fontSize = '.9rem';
 elChangeSelectBoxTimeRadioBoxSixMonthRadioLabel.style.color = '#f8f8f8';
 elChangeSelectBoxTimeRadioBoxSixMonthRadioLabel.style.userSelect = 'none';
 elChangeSelectBoxTimeRadioBoxSixMonthRadioLabel.style.textShadow = '0 0 6px #d6d6d6';
+elChangeSelectBoxTimeRadioBoxSixMonthRadioLabel.style.cursor = 'pointer';
+elChangeSelectBoxTimeRadioBoxSixMonthRadioLabel.onmousemove = function() {
+  elChangeSelectBoxTimeRadioBoxSixMonthRadioLabel.style.textShadow = '0 0 20px #d6d6d6';
+}
+elChangeSelectBoxTimeRadioBoxSixMonthRadioLabel.onmouseout = function() {
+  elChangeSelectBoxTimeRadioBoxSixMonthRadioLabel.style.textShadow = '0 0 6px #d6d6d6';
+}
 
 var elChangeMainBox = document.createElement('div');
 elChangeBox.appendChild(elChangeMainBox);
 elChangeMainBox.style.display = 'flex';
 elChangeMainBox.style.alignItems = 'center';
-// elChangeMainBox.style.marginTop = '6px';
 
 var elChangeMainBoxLine = document.createElement('div');
 elChangeMainBox.appendChild(elChangeMainBoxLine);
