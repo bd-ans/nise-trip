@@ -969,8 +969,8 @@ setTimeout(function() {
     elChangeSelectBoxSelect.onchange = function() {
         if (elChangeSelectBoxSelect.value !== 'Mamlakatni tanlang') {
           elChangeSelectTimeBox.style.opacity = '1';
-          elChangeSelectTimeBox.style.transform = 'translateY(47px)';
-          elChangeSelectTimeBox.style.transition = '.5s';
+          elChangeSelectTimeBox.style.transform = 'translateY(17px)';
+          elChangeSelectTimeBox.style.transition = '.6s';
         }
     }
 } , 1000);
@@ -981,6 +981,7 @@ var mainSelectText = ``;
 setInterval(function() {
   mainSelectvalue = elChangeSelectBoxSelect.value;
   elChangeSelectBoxTimeTitle.textContent = `${mainSelectvalue}ga Qancha vaqtga sayohat qilmoqchisiz`;
+  elChangeMainCheckBoxText.textContent = `${mainSelectvalue} da nimalarga pul ishlatmoqchisiz`;
 } , 1);
 
 
@@ -988,7 +989,7 @@ var elChangeSelectTimeBox = document.createElement('div');
 elChangeBox.appendChild(elChangeSelectTimeBox);
 elChangeSelectTimeBox.style.opacity = '0';
 elChangeSelectTimeBox.style.transform = 'translateY(30px)';
-elChangeSelectTimeBox.style.marginTop = '-47px';
+elChangeSelectTimeBox.style.marginTop = '-17px';
 
 var elChangeSelectBoxTimeTitle = document.createElement('p');
 elChangeSelectTimeBox.appendChild(elChangeSelectBoxTimeTitle);
@@ -1105,7 +1106,7 @@ var elChangeMainBox = document.createElement('div');
 elChangeBox.appendChild(elChangeMainBox);
 elChangeMainBox.style.display = 'flex';
 elChangeMainBox.style.alignItems = 'center';
-elChangeMainBox.style.marginTop = '6px';
+// elChangeMainBox.style.marginTop = '6px';
 
 var elChangeMainBoxLine = document.createElement('div');
 elChangeMainBox.appendChild(elChangeMainBoxLine);
@@ -1113,7 +1114,7 @@ elChangeMainBoxLine.style.width = '100%';
 elChangeMainBoxLine.style.height = '1px';
 elChangeMainBoxLine.style.backgroundColor = '#d6d6d6';
 elChangeMainBoxLine.style.opacity = '0';
-elChangeMainBoxLine.style.marginTop = '53px';
+elChangeMainBoxLine.style.marginTop = '35px';
 
 // CHANGE HOTEL BOX START
 
@@ -1121,15 +1122,25 @@ var elChangeMainCheckBox = document.createElement('div');
 elChangeBox.appendChild(elChangeMainCheckBox);
 elChangeMainCheckBox.style.display = 'flex';
 elChangeMainCheckBox.style.alignItems = 'center';
-elChangeMainCheckBox.style.marginTop = '-47px';
+elChangeMainCheckBox.style.marginTop = '-17px';
 elChangeMainCheckBox.style.opacity = '0';
+elChangeMainCheckBox.style.position = 'relative';
+
+var elChangeMainCheckBoxText = document.createElement('p');
+elChangeMainCheckBox.appendChild(elChangeMainCheckBoxText);
+elChangeMainCheckBoxText.style.position = 'absolute';
+elChangeMainCheckBoxText.style.fontSize = '.8rem';
+elChangeMainCheckBoxText.style.color = '#f8f8f8';
+elChangeMainCheckBoxText.style.userSelect = 'none';
+elChangeMainCheckBoxText.style.textShadow = '0 0 6px #d6d6d6';
+elChangeMainCheckBoxText.style.marginTop = '-14px';
 
 setInterval(function() {
   if (elChangeSelectBoxTimeRadioBoxWeekRadio.checked || elChangeSelectBoxTimeRadioBoxTwoWeekRadio.checked || elChangeSelectBoxTimeRadioBoxMonthRadio.checked || elChangeSelectBoxTimeRadioBoxThreeMonthRadio.checked || elChangeSelectBoxTimeRadioBoxSixMonthRadio.checked) {
     elChangeMainBoxLine.style.opacity = '.5';
-    elChangeMainBoxLine.style.transform = 'translateY(-47px)';
+    elChangeMainBoxLine.style.transform = 'translateY(-12px)';
     elChangeMainCheckBox.style.opacity = '1';
-    elChangeMainCheckBox.style.transform = 'translateY(47px)';
+    elChangeMainCheckBox.style.transform = 'translateY(17px)';
     elChangeMainCheckBox.style.transition = '.5s';
     elChangeMainBoxLine.style.transition = '.5s';
   } else {
@@ -1138,7 +1149,8 @@ setInterval(function() {
 
 var elChangeMainHotelCheckBox = document.createElement('div');
 elChangeMainCheckBox.appendChild(elChangeMainHotelCheckBox);
-elChangeMainHotelCheckBox.setAttribute('class', 'form-check form-switch ms-2');
+elChangeMainHotelCheckBox.setAttribute('class', 'form-check form-switch');
+elChangeMainHotelCheckBox.style.marginTop = '1px';
 
 var elChangeMainSwitchInput = document.createElement('input');
 elChangeMainHotelCheckBox.appendChild(elChangeMainSwitchInput);
@@ -1146,12 +1158,7 @@ elChangeMainSwitchInput.type = 'checkbox';
 elChangeMainSwitchInput.setAttribute('class', 'form-check-input');
 elChangeMainSwitchInput.id = 'flexSwitchCheckDefault';
 elChangeMainSwitchInput.setAttribute('role', 'switch');
-
-/* elChangeMainSwitchInput.addEventListener('change', function() {
-  if (elChangeMainSwitchInput.checked) {
-    alert('checked');
-  }
-} ); */
+elChangeMainSwitchInput.style.marginTop = '7px';
 
 var elChangeMainSwitchLabel = document.createElement('label');
 elChangeMainHotelCheckBox.appendChild(elChangeMainSwitchLabel);
@@ -1161,7 +1168,7 @@ elChangeMainSwitchLabel.textContent = 'Mehmonhona';
 elChangeMainSwitchLabel.style.fontSize = '1rem';
 elChangeMainSwitchLabel.style.textShadow = '0 0 6px #d6d6d6';
 elChangeMainSwitchLabel.style.userSelect = 'none';
-elChangeMainSwitchLabel.style.marginTop = '5px';
+elChangeMainSwitchLabel.style.marginTop = '9px';
 
 // CHANGE HOTEL BOX EDN
 // CHANGE HOTEL SWITCH BOX START
