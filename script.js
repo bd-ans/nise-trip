@@ -158,8 +158,7 @@ elSignUpButton.onclick = function() {
   userLastNameValue = 'Akbarov';
   userName.textContent = userNameValue + ' ' + userLastNameValue;
   userNickName.textContent = 'asn_me';
-  // var balanceMain = Math.floor(Math.random() * (50000000 - 1) + 1);
-  var balanceMain = 5000000;
+  var balanceMain = Math.floor(Math.random() * (50000000 - 1) + 1);
   userMoney.textContent = balanceMain + ' UZS';
   userMoney.value = balanceMain;
 }
