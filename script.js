@@ -1429,7 +1429,7 @@ setInterval(function() {
   
   if (userMoney.value >= travelCost) {
     mainInfoBoxTitle.textContent = `${countryName}ga ${tripTime} sayohatga chiqaolasiz va qo'shimcha ${spendMoney}gaham pulingiz yetadi`;
-    mainInfoBoxTitle.style.color = '#d6d6d6';
+    mainInfoBoxTitle.style.color = '#fff3e0';
   } if (userMoney.value < travelCost) {
     mainInfoBoxTitle.textContent = `${countryName}ga ${tripTime} sayohatga chiqaolmaysiz. Sizga ${travelCost - userMoney.value} yetmayapdi`;
     mainInfoBoxTitle.style.color = '#ff0';
