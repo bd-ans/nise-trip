@@ -1,15 +1,11 @@
 var regStatus = true;
-var hotelPriceUSD = 120.72;
-var aviaTicketPriceEUR = 513.84;
-var suvinersPriceUSD = 213.64;
+var hotelPriceUSD = 120;
+var aviaTicketPriceEUR = 513;
+var suvinersPriceUSD = 213;
 
-var hotelPriceUZS = hotelPriceUSD * 10976.29;
-var aviaTicketPriceUZS = aviaTicketPriceEUR * 11181.93;
-var suvinersPriceUZS = suvinersPriceUSD * 10976.29;
-
-hotelPriceUZS = hotelPriceUZS.toFixed(0);
-aviaTicketPriceUZS = aviaTicketPriceUZS.toFixed(0);
-suvinersPriceUZS = suvinersPriceUZS.toFixed(0);
+var hotelPriceUZS = hotelPriceUSD * 10976.29.toFixed(0);
+var aviaTicketPriceUZS = aviaTicketPriceEUR * 11181.93.toFixed(0);
+var suvinersPriceUZS = suvinersPriceUSD * 10976.29.toFixed(0);
 
 var travelCost = 0;
 
@@ -1226,25 +1222,28 @@ elChangeSelectBoxTimeRadioBoxSixMonthRadioLabel.onmouseout = function() {
 }
 
 var tripTime = '';
-
+var tripTimeCost = 0;
 setInterval(function() {
   if (elChangeSelectBoxTimeRadioBoxWeekRadio.checked) {
     travelCost = travelCost + 1200000;
     tripTime = '1 Hafta';
+    tripTimeCost = 1200000;
   } else if (elChangeSelectBoxTimeRadioBoxTwoWeekRadio.checked) {
     travelCost = travelCost + 2000000;
     tripTime = '2 Hafta';
+    tripTimeCost = 2000000;
   } else if (elChangeSelectBoxTimeRadioBoxMonthRadio.checked) {
     travelCost = travelCost + 3600000;
     tripTime = '1 Oyga';
+    tripTimeCost = 3600000;
   } else if (elChangeSelectBoxTimeRadioBoxThreeMonthRadio.checked) {
     travelCost = travelCost + 10000000;
     tripTime = '3 Oyga';
+    tripTimeCost = 10000000;
   } else if (elChangeSelectBoxTimeRadioBoxSixMonthRadio.checked) {
     travelCost = travelCost + 18000000;
     tripTime = '6 Oyga';
-  } else {
-    travelCost = travelCost;
+    tripTimeCost = 18000000;
   }
 }
 , 100);
@@ -1395,25 +1394,29 @@ mainInfoBoxTitle.style.userSelect = 'none';
 mainInfoBoxTitle.style.opacity = '0';
 
 var spendMoney = '';
+var spendMoneyCost = '';
 
 setInterval(function() {
     if (elChangeMainSwitchInput.checked) {
-      travelCost = travelCost + 2120000;
+      travelCost = travelCost + hotelPriceUZS;
       spendMoney = 'Mehmonhona';
+      spendMoneyCost = hotelPriceUZS;
       mainInfoBoxTitle.style.transform = 'translateY(27px)';
       mainInfoBoxTitle.style.opacity = '1';
       mainInfoBoxTitle.style.transition = 'all 0.3s ease-in-out';
     }
     if (elChangeMainTicketSwitchInput.checked) {
-      travelCost = travelCost + 3120000;
+      travelCost = travelCost + aviaTicketPriceUZS;
       spendMoney = 'Avia chipta';
+      spendMoneyCost = aviaTicketPriceUZS;
       mainInfoBoxTitle.style.transform = 'translateY(27px)';
       mainInfoBoxTitle.style.opacity = '1';
       mainInfoBoxTitle.style.transition = 'all 0.3s ease-in-out';
     }
     if (elChangeMainSuvinerSwitchInput.checked) {
-      travelCost = travelCost + 1020000;
+      travelCost = travelCost + suvinersPriceUZS;
       spendMoney = 'Suvinerlar';
+      spendMoneyCost = suvinersPriceUZS;
       mainInfoBoxTitle.style.transform = 'translateY(27px)';
       mainInfoBoxTitle.style.opacity = '1';
       mainInfoBoxTitle.style.transition = 'all 0.3s ease-in-out';
@@ -1426,6 +1429,23 @@ setInterval(function() {
       }
     }
     , 1);
+
+    setInterval(function() {
+      if (elChangeMainSwitchInput.checked || elChangeMainTicketSwitchInput.checked || elChangeMainSuvinerSwitchInput.checked) {
+        console.log(`Umumuiy hisobot
+
+${countryName}ga borish narxi ${travelCost} UZS
++
+${tripTime} sayohat narhi ${tripTimeCost} UZS
++
+${spendMoney} ${spendMoneyCost} UZS
+=====
+umumiy narxi ${travelCost + tripTimeCost + spendMoneyCost} UZS`);
+      } else {
+        
+      }
+    }
+    , 1000);
   
   if (userMoney.value >= travelCost) {
     mainInfoBoxTitle.textContent = `${countryName}ga ${tripTime} sayohatga chiqaolasiz va qo'shimcha ${spendMoney}gaham pulingiz yetadi`;
